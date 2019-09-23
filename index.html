@@ -1,4 +1,4 @@
-<body><script>t="";b = [0,1,2,3,4,5,6,7,8,9,"+","-","*","/","="]
-f=a=>{try{a.id=="14"?(p.innerHTML=eval(t),t=""):(t+=a.value,p.innerHTML=t)}catch(er){t=""}}
-b.forEach((e,i)=>{document.body.insertAdjacentHTML("beforebegin","<input type='button'\
-onclick='f(this)' id='"+i+"' value='"+e+"'>"+(i%3==0?("<br>"):""))})</script><p id="p">
+<body><script>g="";h=()=>p.innerHTML;s=(l)=>p.innerHTML=l;b=[1,2,3,4,5,6,7,8,9,0,"+","-","/","*","="];
+f=(e)=>{((e.id==14)?(s(eval(h())),g=""):((e.id>9)?((b.indexOf(h()[h().length-1])>9)?
+(5/0):(g+=e.value,s(g))):(g+=e.value,s(g))))};b.forEach((e, i)=>{document.body.insertAdjacentHTML("beforeend",
+`<input type = 'button' id = ${i} value = ${e} onclick='f(this)'>`);});</script><p id='p'>
